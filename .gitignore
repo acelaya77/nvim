@@ -3,5 +3,5 @@ test.sh
 .luarc.json
 nvim
 Session.vim
-
+lazy-lock.json
 spell/
