@@ -5,6 +5,12 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 local opts = { noremap = true, silent = true }
 
+-- move line up
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', opts) -- move line up(n)
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', opts) -- move line down(n)
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", opts) -- move line up(v)
+vim.keymap.set('v', '<A-k>', ":m '>-2<CR>gv=gv", opts) -- move line down(v)
+
 -- save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 

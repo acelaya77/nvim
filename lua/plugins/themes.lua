@@ -9,7 +9,7 @@ return {
     --    end,
     config = function()
       require('tokyonight').setup {
-        style = 'storm',
+        style = 'night',
         transparent = true,
         terminal_colors = true,
         styles = {
