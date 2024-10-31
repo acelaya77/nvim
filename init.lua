@@ -53,6 +53,7 @@ require('lazy').setup({
   require 'plugins.lualine',
   require 'plugins.autocomplete',
   require 'plugins.none-ls',
+  require 'plugins.alpha',
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
