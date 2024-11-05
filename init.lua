@@ -54,6 +54,7 @@ require('lazy').setup({
   require 'plugins.autocomplete',
   require 'plugins.none-ls',
   require 'plugins.alpha',
+  require 'plugins.csv',
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
