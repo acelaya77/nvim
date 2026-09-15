@@ -7,7 +7,7 @@
 
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = 'master',
+	branch = "master",
 	build = ":TSUpdate",
 	event = { "BufReadPost", "BufNewFile" },
 	lazy = false,
@@ -29,7 +29,6 @@ return {
 				"markdown_inline",
 				"python",
 				"rust",
-				"svelte",
 				"typescript",
 				"vue",
 				"yaml",

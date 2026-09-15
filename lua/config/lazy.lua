@@ -9,8 +9,8 @@
 --   > lazy.nvim website : https://lazy.folke.io/installation
 -- ================================================================================================
 
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
----@diagnostic disable-next-line: undefined-field (fs_stat)
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
@@ -26,28 +26,25 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+-- Setup lazy.nvim
 require("config.globals")
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
-
-local plugins_dir = "plugins"
-
 require("lazy").setup({
 	spec = {
-		{ import = plugins_dir },
+		-- import your plugins
+		{ import = "plugins" },
 	},
-	rtp = {
-		disabled_plugins = {
-			"netrw",
-			"netrwPlugin",
-		},
-	},
-	install = {
-		colorscheme = {
-			-- "melange"
-			"nightfox,",
-		},
-	},
+	-- Configure any other settings here. See the documentation for more details.
+	-- colorscheme that will be used when installing plugins.
+	install = { colorscheme = { "habamax", "nightfox" } },
+	-- automatically check for plugin updates
 	checker = { enabled = true },
 })

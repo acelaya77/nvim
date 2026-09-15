@@ -10,7 +10,7 @@ vim.opt.cursorline = true -- Highlight current line
 vim.opt.scrolloff = 10 -- Keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 8 -- Keep 8 columns left/right of cursor
 vim.opt.wrap = false -- Don't wrap lines
-vim.opt.cmdheight = 1 -- Command line height
+vim.opt.cmdheight = 2 -- Command line height
 vim.opt.spelllang = { "en", "de" } -- Set language for spellchecking
 
 -- Tabbing / Indentation
@@ -35,8 +35,8 @@ vim.opt.signcolumn = "yes" -- Always show sign column
 vim.opt.colorcolumn = "100" -- Show column at 100 characters
 vim.opt.showmatch = true -- Highlight matching brackets
 vim.opt.matchtime = 2 -- How long to show matching bracket
-vim.opt.completeopt = "menuone,noinsert,noselect" -- Completion options
-vim.opt.showmode = false -- Don't show mode in command line
+vim.opt.completeopt = "menuone,noinsert" -- Completion options: ,noselect
+vim.opt.showmode = true -- Don't show mode in command line
 vim.opt.pumheight = 10 -- Popup menu height
 vim.opt.pumblend = 10 -- Popup menu transparency
 vim.opt.winblend = 0 -- Floating window transparency
@@ -86,7 +86,7 @@ vim.opt.wildignorecase = true -- Case-insensitive tab completion in commands
 
 -- Cursor Settings
 vim.opt.guicursor = {
-	"n-v-c:block", -- Normal, Visual, Command-line
+	"n-v-c:ver50", -- Normal, Visual, Command-line
 	"i-ci-ve:block", -- Insert, Command-line Insert, Visual-exclusive
 	"r-cr:hor20", -- Replace, Command-line Replace
 	"o:hor50", -- Operator-pending
